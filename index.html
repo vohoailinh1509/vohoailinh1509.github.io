@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CĐTH20C - Trang Chủ</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/FontAwesome/docs/css/all.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="site-branding-area">
+            <div class="header-logo-cart container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo">
+                            <a href="./index.html"><img src="./img/Pornhub-Logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="shopping-item">
+                            <button id="cart">
+                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                Giỏ Hàng
+                            </button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Giỏ Hàng</h5>
+                                        <span class="close">&times;</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="cart-row">
+                                            <span class="cart-header col-12">Sản Phẩm</span>
+                                        </div>
+                                        <div class="cart-items">
+                                        </div>
+                                        <div class="cart-total">
+                                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                                            <span class="cart-total-price">0 - VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="moda-middle">
+                                        <h5>THÔNG TIN KHÁCH HÀNG</h5>
+                                        <form>
+                                            <div>
+                                                <input type="text" placeholder="Họ và tên">
+                                                <input type="text" placeholder="Số điện thoại">
+                                                <input type="text" placeholder="Địa chỉ email">
+                                            </div>
+                                            <p>Chọn địa chỉ nhận hàng</p>
+                                            <select name="flatform">
+                                                <option value="TP  HCM">TP HCM</option>
+                                                <option value="An Giang">An Giang</option>
+                                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                                <option value="Bắc Giang">Bắc Giang</option>
+                                                <option value="Bắc Kạn">Bắc Kạn</option>
+                                                <option value="Bạc Liêu">Bạc Liêu</option>
+                                                <option value="Bắc Ninh">Bắc Ninh</option>
+                                                <option value="Bến Tre">Bến Tre</option>
+                                                <option value="Bình Định">Bình Định</option>
+                                                <option value="Bình Dương">Bình Dương</option>
+                                                <option value="Bình Phước">Bình Phước</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Cà Mau">Cà Mau</option>
+                                                <option value="Cao Bằng">Cao Bằng</option>
+                                                <option value="Đắk Lắk">Đắk Lắk</option>
+                                                <option value="Đắk Nông">Đắk Nông</option>
+                                                <option value="Điện Biên">Điện Biên</option>
+                                                <option value="Đồng Nai">Đồng Nai</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Gia Lai">Gia Lai</option>
+                                                <option value="Hà Giang">Hà Giang</option>
+                                                <option value="Hà Nam">Hà Nam</option>
+                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                <option value="Hải Dương">Hải Dương</option>
+                                                <option value="Hậu Giang">Hậu Giang</option>
+                                                <option value="Hòa Bình">Hòa Bình</option>
+                                                <option value="Hưng Yên">Hưng Yên</option>
+                                                <option value="Khánh Hòa">Khánh Hòa</option>
+                                                <option value="Kiên Giang">Kiên Giang</option>
+                                                <option value="Kon Tum">Kon Tum</option>
+                                                <option value="Lai Châu">Lai Châu</option>
+                                                <option value="Lâm Đồng">Lâm Đồng</option>
+                                                <option value="Lạng Sơn">Lạng Sơn</option>
+                                                <option value="Lào Cai">Lào Cai</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Nam Định">Nam Định</option>
+                                                <option value="Nghệ An">Nghệ An</option>
+                                                <option value="Ninh Bình">Ninh Bình</option>
+                                                <option value="Ninh Thuận">Ninh Thuận</option>
+                                                <option value="Phú Thọ">Phú Thọ</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                <option value="Quảng Ninh">Quảng Ninh</option>
+                                                <option value="Quảng Trị">Quảng Trị</option>
+                                                <option value="Sóc Trăng">Sóc Trăng</option>
+                                                <option value="Sơn La">Sơn La</option>
+                                                <option value="Tây Ninh">Tây Ninh</option>
+                                                <option value="Thái Bình">Thái Bình</option>
+                                                <option value="Thái Nguyên">Thái Nguyên</option>
+                                                <option value="Thanh Hóa">Thanh Hóa</option>
+                                                <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                                <option value="Tiền Giang">Tiền Giang</option>
+                                                <option value="Trà Vinh">Trà Vinh</option>
+                                                <option value="Tuyên Quang">Tuyên Quang</option>
+                                                <option value="Vĩnh Long">Vĩnh Long</option>
+                                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                <option value="Yên Bái">Yên Bái</option>
+                                                <option value="Phú Yên">Phú Yên</option>
+                                                <option value="Tp.Cần Thơ">Tp.Cần Thơ</option>
+                                                <option value="Tp.Đà Nẵng">Tp.Đà Nẵng</option>
+                                                <option value="Tp.Hải Phòng">Tp.Hải Phòng</option>
+                                                <option value="Tp.Hà Nội">Tp.Hà Nội</option>
+                                            </select>
+                                            <input type="text" placeholder="Địa chỉ cụ thể">
+                                            <input type="text" placeholder="Yêu cầu của khách hàng">
+                                        </form>
+                                        <h6>Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của CĐTH20C</h6>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                                        <button type="button" class="btn btn-primary order">ĐẶT HÀNG</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainmenu navbar-light bg-light justify-content-start sticky-top">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light padding-style">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                        <div class="collapse navbar-collapse header-logo-cart" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item-list nav-item actives">
+                                    <a class="nav-link" href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item-list nav-item">
+                                    <a class="nav-link" href="./shop.html">Sản Phẩm</a>
+                                </li>
+                                <li class="nav-item-list nav-item">
+                                    <a class="nav-link" href="./gio-hang.html">Giỏ Hàng</a>
+                                </li>
+
+                                <li class="nav-item-list nav-item">
+                                    <a class="nav-link" href="./dangnhap.html">Đăng Nhập</a>
+                                </li>
+                                <li class="nav-item-list nav-item">
+                                    <a class="nav-link" href="./dangky.html">Đăng ký</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm Kiếm ..." aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="block-slider block-slider4">
+                    <div class="slider-img" id="bxslider-home4">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./img/sl/hotsale-galaxy-s21-plus-5g-web.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/sl/hotsale-mua-ngay-keo-lo-1200x382.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/sl/ip-11-web.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/sl/realme-8-1200x382.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/sl/xiaomi-note-10s-note-10-5g-web.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/sl/xweb.png" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promo-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="promo-header-list col-md-3 col-sm-6">
+                            <div class=" promo single-promo promo1">
+                                <i class="fa fa-sync-alt"></i>
+                                <p>ĐỔI TRẢ SAU 30 NGÀY</p>
+                            </div>
+                        </div>
+                        <div class="promo-header-list col-md-3 col-sm-6">
+                            <div class="promo single-promo promo2">
+                                <i class="fa fa-truck"></i>
+                                <p>MIỄN PHÍ VẬN CHUYỂN</p>
+                            </div>
+                        </div>
+                        <div class="promo-header-list col-md-3 col-sm-6">
+                            <div class=" promo single-promo promo3">
+                                <i class="fa fa-lock"></i>
+                                <p>BẢO MẬT AN TOÀN</p>
+                            </div>
+                        </div>
+                        <div class="promo-header-list col-md-3 col-sm-6">
+                            <div class="promo single-promo promo4">
+                                <i class="fa fa-gift"></i>
+                                <p>KHUYẾN MÃI HẤP DẪN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="maincontent">
+                <button onclick="topFunction()" id="gototop" title="Go to top"><i class="fa fa-arrow-alt-circle-up"></i></button>
+                <div class="product-big-title-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="product-bit-title text-center">
+                                    <h2>Sản phẩm mới</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/t9-1200-60-1200x60-3.png" alt="">
+                <div class="row">
+                    <div class="card single-product col-md-3 col-sm-6 col-12">
+                        <div class="product-f-image">
+                            <a href="./list-phone/asus-rog-5-001.html" class="link-img">
+                                <img class="card-img-top img-prd" src="./img/phone/asus-rog-phone-5/icon/asus-rog-phone-5_0002_gsmarena_001.jpg" alt="">
+                                <span class="hotsale"></span>
+                                <span class="bhv30"></span>
+                            </a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/asus-rog-5-001.html">
+                                <h2 class="content-product-h2 card-title ">Asus ROG Phone 5</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">14850000</ins><del>18.800.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card single-product col-md-3 col-sm-6 col-12">
+                        <div class="product-f-image">
+                            <a href="./list-phone/iphone-11-002.html" class="link-img">
+                                <img class="card-img-top img-prd" src="./img/phone/iphone-11/icon/layer_20.jpg" alt=" ">
+                                <span class="bhv30"></span>
+                            </a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/iphone-11-002.html">
+                                <h2 class="content-product-h2 card-title">iPhone 11 I VN/A</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">14850000</ins><del>18.800.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card single-product col-md-3 col-sm-6 col-12">
+                        <div class="product-f-image">
+                            <a href="./list-phone/iphone-12-pro-max-003.html" class="link-img">
+                                <img class="card-img-top img-prd" src="./img/phone/iphone-12-pro-max/icon/iphone-12-pro-max_1__7.jpg " alt=" ">
+                                <span class="hotsale"></span>
+                                <span class="bhv30"></span>
+                            </a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/iphone-12-pro-max-003.html">
+                                <h2 class="content-product-h2 card-title">iPhone 12 Pro Max</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">28990000</ins><del>32.990.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card single-product col-md-3 col-sm-6 col-12">
+                        <div class="product-f-image">
+                            <a href="./list-phone/iphone-12-004.html" class="link-img">
+                                <img class="card-img-top img-prd" src="./img/phone/iphone-12/icon/iphone-12_2__3.jpg" alt=" ">
+                                <span class="hotsale"></span>
+                                <span class="bhv45"></span>
+                            </a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/iphone-12-004.html">
+                                <h2 class="content-product-h2 card-title">iPhone 12 I VN/A</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">18550000</ins><del>22.950.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card single-product col-md-3 col-sm-6 col-12">
+                        <div class="product-f-image">
+                            <a href="./list-phone/samsung-galaxy-A02s-005.html" class="link-img"><img class="card-img-top img-prd" src="./img/phone/ss-glx-a02s/icon/samsung-galaxy-a02s-1.jpg" alt=" "></a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/samsung-galaxy-A02s-005.html">
+                                <h2 class="content-product-h2 card-title">Samsung Galaxy A02s</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">3000000</ins><del>3.950.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card single-product col-md-3 col-sm-6 col-12 ">
+                        <div class="product-f-image">
+                            <a href="./list-phone/samsung-galaxy-a32-006.html" class="link-img"><img class="card-img-top img-prd" src="./img/phone/ss-glx-a32/icon/samsung-galaxy-a32-20.jpg" alt=" "></a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/samsung-galaxy-a32-006.html">
+                                <h2 class="content-product-h2 card-title">Samsung Galaxy A32</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">5850000</ins><del>6.990.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card single-product col-md-3 col-sm-6 col-12 ">
+                        <div class="product-f-image">
+                            <a href="./list-phone/xiaomi-mi-11-007.html" class="link-img"><img class="card-img-top img-prd" src="./img/phone/xi-mi-11-lite-5g/icon/xiaomi-mi-11-lite-5g-2_10.jpg" alt=" "></a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/xiaomi-mi-11-007.html">
+                                <h2 class="content-product-h2 card-title">Xiaomi Mi 11 Lite 5G</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">8750000</ins><del>10.550.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card single-product col-md-3 col-sm-6 col-12">
+                        <div class="product-f-image">
+                            <a href="./list-phone/xiaomi-redmi-node-10-pro-008.html" class="link-img"><img class="card-img-top img-prd" src="./img/phone/xi-mi-note-10pro/icon/xiaomi-redmi-note-10-pro_2_.jpg" alt=" "></a>
+                        </div>
+                        <div class="card-body content-product">
+                            <a href="./list-phone/xiaomi-redmi-node-10-pro-008.html">
+                                <h2 class="content-product-h2 card-title">Xiaomi Redmi Note 10 Pro</h2>
+                            </a>
+                            <div class="content-product-deltals">
+                                <div class="product-carousel-price">
+                                    <ins class="price money">6450000</ins><del>7.550.000</del>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="brands">
+                <div class="row">
+                    <div class="img-sl-item carousel-item active">
+                        <img class="img-sl-logo col-md-4 col-sm-12 col-12 d-block w-100" src="./img/samsung-390-210-390x210-1.png" alt="... ">
+                        <img class="img-sl-logo col-md-4 col-sm-12 col-12 d-block w-100" src="./img/appleDT-390x210.png" alt="... ">
+                        <img class="img-sl-logo col-md-4 col-sm-12 col-12 d-block w-100" src="./img/Laptop-T9Laptop-390x210-1.png" alt="... ">
+                    </div>
+                </div>
+            </div>
+            <div class="product-widget-area">
+                <div class="product-group row">
+                    <div class="list-sp col-xl-4 col-md-12 col-sm-12 col-12">
+                        <div class="product-item single-product-widget">
+                            <h2 class="product-wid-title">HOT SALE <img src="./img/icon-sale/iconsale.png" alt="" class="sale"></h2>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/iphone-11-pro/icon/layer_23.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html">iPhone 11 Pro I Chính hãng VN/A</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>23.750.000</ins> <del>27.000.000</del>
+                                </div>
+                            </div>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/iphone-12-mini-128GB/icon/iphone-12_7__6_2.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html ">iPhone 12 Mini I Chính hãng VN/A</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>17.250.000</ins> <del>20.990.000</del>
+                                </div>
+                            </div>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/iphone-xr-64gb/icon/apple-iphone-xr-64-gb-chinh-hang-vn_3_.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html">iPhone XR 64GB I Chính hãng VN/A</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>11.590.000</ins> <del>14.990.000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-sp col-xl-4 col-md-12 col-sm-12 col-12">
+                        <div class="product-item single-product-widget">
+                            <span class="product-wid-title"><img src="./img/icon-sale/gia-soc.png" alt="" class="sale"> </span>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/oppo-reno-5/icon/oppo-reno-5_3_.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html">Oppo Reno 5</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>8.290.000</ins> <del>8.690.000</del>
+                                </div>
+                            </div>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/ss-glx-a52/icon/samsung-galaxy-a52-26.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html">Samsung Galaxy A52</a></h2>
+                                <div class="product-wid-rating ">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>8.200.000</ins> <del>9.290.000</del>
+                                </div>
+                            </div>
+                            <div class="single-wid-product">
+                                <a href="single-product.html"><img src="./img/phone/ss-glx-a72/icon/samsung-galaxy-a72-30.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="single-product.html">Samsung Galaxy A72</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>10.000.000</ins> <del>11.490.000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-sp col-xl-4 col-md-12 col-sm-12 col-12">
+                        <div class="product-item single-product-widget">
+                            <h2 class="product-wid-title">Sản phẩm mới</h2>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/ss-glx-note-20-ultra/icon/black_final.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html">Samsung Galaxy Note 20 Ultra</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>18.490.000</ins> <del>29.990.000</del>
+                                </div>
+                            </div>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/ss-glx-s21-ultra-5g/icon/samsung-galaxy-s21-ultra-1_1.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html">Samsung Galaxy S21 Ultra 5G</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>21.000.000</ins> <del>30.900.000</del>
+                                </div>
+                            </div>
+                            <div class="single-wid-product">
+                                <a href="./single-product.html"><img src="./img/phone/xi-mi-10t-pro-5g/icon/xiaomi-mi-10t-pro_2_.jpg" alt=" " class="product-thumb"></a>
+                                <h2><a href="./single-product.html">Xiaomi Mi 10T Pro 5G</a></h2>
+                                <div class="product-wid-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product-wid-price">
+                                    <ins>11.200.000</ins> <del>12.900.000</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/tro-gia.png" alt="">
+    </div>
+    <div class="footer-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-about-us">
+                        <h2>CĐTH<span>20C</span></h2>
+                        <p>Phân phối Điện thoại Xiaomi, Apple, Samsung,... (Chính hãng) mới nhất, giá RẺ tại Hà Nội, Tp.HCM, Đà Nẵng. Bán, mua điện thoại Xiaomi xách tay trả góp Uy tín tại Hà Nội, HCM, Đà Nẵng.</p>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Địa chỉ liên hệ</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5177580567106!2d106.69916291446796!3d10.771600262228969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEvhu7kgdGh14bqtdCBDYW8gVGjhuq9uZw!5e0!3m2!1svi!2s!4v1630681410137!5m2!1svi!2s"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Tổng đài hỗ trợ (Thu phí gọi)</h2>
+                        <ul>
+                            <li><span class="support">Mua hàng:</span> 0394726213</li>
+                            <li><span class="support">Kỹ Thuật:</span> 0394726213</li>
+                            <li><span class="support">Khiếu nại:</span> 0394726213</li>
+                            <li><span class="support">Bảo Hành:</span> 0394726213</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title">Đăng kí nhận bản tin</h2>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="điền gmail đăng ký.... ">
+                                <input type="submit" value="Đăng ký ">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("gototop").style.display = "block";
+            } else {
+                document.getElementById("gototop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="main.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/jquery.slim.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

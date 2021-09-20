@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> CĐTH20C - Đăng Ký </title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/FontAwesome/docs/css/all.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="site-branding-area">
+            <div class="header-logo-cart container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo">
+                            <a href="./index.html"><img src="./img/Pornhub-Logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="shopping-item">
+                            <button id="cart">
+                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                Giỏ Hàng
+                            </button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Giỏ Hàng</h5>
+                                        <span class="close">&times;</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="cart-row">
+                                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                                            <span class="cart-price cart-header cart-column">Giá</span>
+                                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                                        </div>
+                                        <div class="cart-items">
+
+                                        </div>
+                                        <div class="cart-total">
+                                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                                            <span class="cart-total-price">0VNĐ</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainmenu navbar-light bg-light justify-content-start sticky-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light padding-style">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse header-logo-cart" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item-list nav-item ">
+                                <a class="nav-link" href="./shop.html">Sản Phẩm</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./gio-hang.html">Giỏ Hàng</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./dangnhap.html">Đăng Nhập</a>
+                            </li>
+                            <li class="nav-item-list nav-item actives">
+                                <a class="nav-link" href="./dangky.html">Đăng ký</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm Kiếm ..." aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="product-big-title-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product-bit-title text-center">
+                            <h2>ĐĂNG KÝ</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb btn-group">
+                <li class="breadcrumb-item"><a href="./index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item activer" aria-current="page">Đăng ký</li>
+            </ol>
+        </nav>
+        <div class="dang-nhap">
+            <form action="#">
+
+                <label>Tên đăng nhập</label>
+                <input type="text" id="username" onfocusout="checkusername()" placeholder="Tài khoản">
+
+                <label>Địa chỉ email</label>
+                <input type="email" id="email" onfocusout="checkmail()" placeholder="admin123@gmail.com">
+
+                <label>Số điện thoại</label>
+                <input type="text" id="phone" onfocusout="checkphone()" placeholder="số điện thoại">
+
+                <label>Mật khẩu</label>
+                <input type="password" id="pass" onfocusout="checkpass()" placeholder="Mật khẩu">
+
+                <label>Nhập lại mật khẩu</label>
+                <input type="password" id="pass2" onfocusout="checkpass2()" placeholder="Nhập lại mật khẩu">
+            </form><button id="button" onclick="dangky()" type="submit">ĐĂNG KÝ</button>
+            <div class="dang-nhap-footer">
+                <div class="dang-nhap-footer-item">
+                    <span>Đã có tài khoản</span>
+                    <a href="./dangnhap.html">( Đăng nhập )</a>
+                </div>
+                <div class="dang-nhap-footer-item-right">
+                    <a href="./quenmatkhau.html">Quên mật khẩu ?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-about-us">
+                        <h2>CĐTH<span>20C</span></h2>
+                        <p>Phân phối Điện thoại Xiaomi, Apple, Samsung,... (Chính hãng) mới nhất, giá RẺ tại Hà Nội, Tp.HCM, Đà Nẵng. Bán, mua điện thoại Xiaomi xách tay trả góp Uy tín tại Hà Nội, HCM, Đà Nẵng.</p>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Địa chỉ liên hệ</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5177580567106!2d106.69916291446796!3d10.771600262228969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEvhu7kgdGh14bqtdCBDYW8gVGjhuq9uZw!5e0!3m2!1svi!2s!4v1630681410137!5m2!1svi!2s"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Tổng đài hỗ trợ (Thu phí gọi)</h2>
+                        <ul>
+                            <li><span class="support">Mua hàng:</span> 0394726213</li>
+                            <li><span class="support">Kỹ Thuật:</span> 0394726213</li>
+                            <li><span class="support">Khiếu nại:</span> 0394726213</li>
+                            <li><span class="support">Bảo Hành:</span> 0394726213</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title">Đăng kí nhận bản tin</h2>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="điền gmail đăng ký.... ">
+                                <input type="submit" value="Đăng ký ">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkusername() {
+            var regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,32}$/;
+            var name = document.getElementById("username").value;
+
+            if (name == null || name == "") {
+                alert('Tên đăng nhập không được để trống!');
+            } else if (regExp.test(name))
+                return true;
+            else {
+                alert('Tên tài khoảng tối thiểu 6 ký tự, ít nhất một chữ hoa, một chữ thường và một số:');
+            }
+        }
+
+        function checkpass() {
+            var regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+            var password = document.getElementById("pass").value;
+            if (regExp.test(password))
+                return true;
+            else
+                alert('Mật khẩu phải có tối thiểu 6 ký tự, ít nhất một chữ hoa, một chữ thường và một số, không được để trống !!!!');
+        }
+
+        function checkpass2() {
+            var regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+            var password = document.getElementById("pass2").value;
+            var password2 = document.getElementById("pass").value;
+            if (password != password2) {
+                alert('Mật khẩu không đúng vui lòng nhập lại !!!');
+            }
+            if (regExp.test(password))
+                return true;
+            else
+                alert('Mật khẩu phải có tối thiểu 6 ký tự, ít nhất một chữ hoa, một chữ thường và một số, không được để trống !!!!');
+        }
+
+        function checkmail() {
+            var regExp = /^[A-Za-z][\w$.]+@[\w]+\.\w+$/;
+            var email = document.getElementById("email").value;
+            if (regExp.test(email))
+                return true;
+            else
+                alert('email không hợp lệ!');
+        }
+
+        function checkphone() {
+            var regExp = /^(0[234][0-9]{8}|1[89]00[0-9]{4})$/;
+            var phone = document.getElementById("phone").value;
+            if (regExp.test(phone))
+                return true;
+            else
+                alert('SĐT không hợp lệ!');
+        }
+
+        function dangky() {
+            if (checkusername == true && checkmail == true && checkphone == true && checkpass == true && checkpass2 == true) {
+                alert('Xin hãy điền đầy đủ thông tin!!!!');
+            } else {
+                alert('Đăng Ký thành công!!');
+                location = 'index.html';
+            }
+        }
+    </script>
+    <script src="./bootstrap-4.6.0-dist/js/jquery.slim.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/popper.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

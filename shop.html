@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CĐTH20C - Điện Thoại Di Động</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/FontAwesome/docs/css/all.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!--JS-->
+    <script src="./san-pham.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="topFunction()" id="gototop" title="Go to top"><i class="fa fa-arrow-alt-circle-up"></i></button>
+        <div class="site-branding-area">
+            <div class="header-logo-cart container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo">
+                            <a href="./"><img src="./img/Pornhub-Logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="shopping-item">
+                            <button id="cart">
+                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                Giỏ Hàng
+                            </button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Giỏ Hàng</h5>
+                                        <span class="close">&times;</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="cart-row">
+                                            <span class="cart-header col-12">Sản Phẩm</span>
+                                        </div>
+                                        <div class="cart-items">
+                                        </div>
+                                        <div class="cart-total">
+                                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                                            <span class="cart-total-price">0 - VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="moda-middle">
+                                        <h5>THÔNG TIN KHÁCH HÀNG</h5>
+                                        <form>
+                                            <div>
+                                                <input type="text" placeholder="Họ và tên">
+                                                <input type="text" placeholder="Số điện thoại">
+                                                <input type="text" placeholder="Địa chỉ email">
+                                            </div>
+                                            <p>Chọn địa chỉ nhận hàng</p>
+                                            <select name="flatform">
+                                                <option value="TP  HCM">TP HCM</option>
+                                                <option value="An Giang">An Giang</option>
+                                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                                <option value="Bắc Giang">Bắc Giang</option>
+                                                <option value="Bắc Kạn">Bắc Kạn</option>
+                                                <option value="Bạc Liêu">Bạc Liêu</option>
+                                                <option value="Bắc Ninh">Bắc Ninh</option>
+                                                <option value="Bến Tre">Bến Tre</option>
+                                                <option value="Bình Định">Bình Định</option>
+                                                <option value="Bình Dương">Bình Dương</option>
+                                                <option value="Bình Phước">Bình Phước</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Cà Mau">Cà Mau</option>
+                                                <option value="Cao Bằng">Cao Bằng</option>
+                                                <option value="Đắk Lắk">Đắk Lắk</option>
+                                                <option value="Đắk Nông">Đắk Nông</option>
+                                                <option value="Điện Biên">Điện Biên</option>
+                                                <option value="Đồng Nai">Đồng Nai</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Gia Lai">Gia Lai</option>
+                                                <option value="Hà Giang">Hà Giang</option>
+                                                <option value="Hà Nam">Hà Nam</option>
+                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                <option value="Hải Dương">Hải Dương</option>
+                                                <option value="Hậu Giang">Hậu Giang</option>
+                                                <option value="Hòa Bình">Hòa Bình</option>
+                                                <option value="Hưng Yên">Hưng Yên</option>
+                                                <option value="Khánh Hòa">Khánh Hòa</option>
+                                                <option value="Kiên Giang">Kiên Giang</option>
+                                                <option value="Kon Tum">Kon Tum</option>
+                                                <option value="Lai Châu">Lai Châu</option>
+                                                <option value="Lâm Đồng">Lâm Đồng</option>
+                                                <option value="Lạng Sơn">Lạng Sơn</option>
+                                                <option value="Lào Cai">Lào Cai</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Nam Định">Nam Định</option>
+                                                <option value="Nghệ An">Nghệ An</option>
+                                                <option value="Ninh Bình">Ninh Bình</option>
+                                                <option value="Ninh Thuận">Ninh Thuận</option>
+                                                <option value="Phú Thọ">Phú Thọ</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                <option value="Quảng Ninh">Quảng Ninh</option>
+                                                <option value="Quảng Trị">Quảng Trị</option>
+                                                <option value="Sóc Trăng">Sóc Trăng</option>
+                                                <option value="Sơn La">Sơn La</option>
+                                                <option value="Tây Ninh">Tây Ninh</option>
+                                                <option value="Thái Bình">Thái Bình</option>
+                                                <option value="Thái Nguyên">Thái Nguyên</option>
+                                                <option value="Thanh Hóa">Thanh Hóa</option>
+                                                <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                                <option value="Tiền Giang">Tiền Giang</option>
+                                                <option value="Trà Vinh">Trà Vinh</option>
+                                                <option value="Tuyên Quang">Tuyên Quang</option>
+                                                <option value="Vĩnh Long">Vĩnh Long</option>
+                                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                <option value="Yên Bái">Yên Bái</option>
+                                                <option value="Phú Yên">Phú Yên</option>
+                                                <option value="Tp.Cần Thơ">Tp.Cần Thơ</option>
+                                                <option value="Tp.Đà Nẵng">Tp.Đà Nẵng</option>
+                                                <option value="Tp.Hải Phòng">Tp.Hải Phòng</option>
+                                                <option value="Tp.Hà Nội">Tp.Hà Nội</option>
+                                            </select>
+                                            <input type="text" placeholder="Địa chỉ cụ thể">
+                                            <input type="text" placeholder="Yêu cầu của khách hàng">
+                                        </form>
+                                        <h6>Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của CĐTH20C</h6>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                                        <button type="button" class="btn btn-primary order">ĐẶT HÀNG</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainmenu navbar-light bg-light justify-content-start sticky-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light padding-style">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse header-logo-cart" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item-list nav-item actives">
+                                <a class="nav-link" href="./shop.html">Sản Phẩm</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./gio-hang.html">Giỏ Hàng</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./dangnhap.html">Đăng Nhập</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./dangky.html">Đăng ký</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm Kiếm ..." aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="product-big-title-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product-bit-title text-center">
+                            <h2>Sản phẩm</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-breadcrumb row">
+            <nav aria-label="breadcrumb col-md-2 col-sm-12 col-12 ">
+                <ol class="breadcrumb btn-group">
+                    <li class="breadcrumb-item"><a href="./index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item activer" aria-current="page">Điện thoại di động</li>
+                </ol>
+            </nav>
+
+            <div class="product-btn-group col-md-9 col-sm-12 col-12">
+                <div class="btn-group ">
+                    <button type="button" class="btn btn-dangers">Mức giá</button>
+                    <button type="button" class="btn btn-dangers dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <span class="sr-only">Toggle Dropdown</span>
+                    <div class="dropdown-menu col-md-10 col-sm-6 col-12">
+                        <a class="dropdown-item" href="#">Dưới 3 Triệu</a>
+                        <a class="dropdown-item" href="#">Dưới 6 Triệu</a>
+                        <a class="dropdown-item" href="#">Dưới 9 Triệu</a>
+                        <a class="dropdown-item" href="#">Dưới 15 Triệu</a>
+                        <a class="dropdown-item" href="#">Trên 15 Triệu</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dangers">Hãng sản xuất</button>
+                    <button type="button" class="btn btn-dangers dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Xiaomi</a>
+                        <a class="dropdown-item" href="#">Oppo</a>
+                        <a class="dropdown-item" href="#">Apple</a>
+                        <a class="dropdown-item" href="#">Nokia</a>
+                        <a class="dropdown-item" href="#">OnePlus</a>
+                        <a class="dropdown-item" href="#">Asus</a>
+                        <a class="dropdown-item" href="#">Vsmast</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dangers">Hệ điều hành</button>
+                    <button type="button" class="btn btn-dangers dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Android</a>
+                        <a class="dropdown-item" href="#">IOS</a>
+                        <a class="dropdown-item" href="#">Windown phone</a>
+                        <a class="dropdown-item" href="#">HDH Khác</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="product" class="product-list-item row">
+            <div class="card single-product col-md-3 col-sm-6 col-12">
+                <div class="product-f-image">
+                    <a href="./list-phone/asus-rog-5-001.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/asus-rog-phone-5/icon/asus-rog-phone-5_0002_gsmarena_001.jpg" alt="">
+                        <span class="hotsale"></span>
+                        <span class="bhv45"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/asus-rog-5-001.html">
+                        <h2 class="content-product-h2 card-title ">Asus ROG Phone 5</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">14850000</ins><del>18.800.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card single-product col-md-3 col-sm-6 col-12">
+                <div class="product-f-image">
+                    <a href="./list-phone/iphone-11-002.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/iphone-11/icon/layer_20.jpg" alt=" ">
+                        <span class="bhv30"></span>
+                        <span class="hotsale"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/iphone-11-002.html">
+                        <h2 class="content-product-h2 card-title">iPhone 11 I VN/A</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">14850000</ins><del>18.800.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card single-product col-md-3 col-sm-6 col-12">
+                <div class="product-f-image">
+                    <a href="./list-phone/iphone-12-pro-max-003.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/iphone-12-pro-max/icon/iphone-12-pro-max_1__7.jpg " alt=" ">
+                        <span class="hotsale"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/iphone-12-pro-max-003.html">
+                        <h2 class="content-product-h2 card-title">iPhone 12 Pro Max</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">28990000</ins><del>32.990.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card single-product col-md-3 col-sm-6 col-12">
+                <div class="product-f-image">
+                    <a href="./list-phone/iphone-12-004.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/iphone-12/icon/iphone-12_2__3.jpg" alt=" ">
+                        <span class="bhv30"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/iphone-12-004.html">
+                        <h2 class="content-product-h2 card-title">iPhone 12 I VN/A</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">18550000</ins><del>22.950.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card single-product col-md-3 col-sm-6 col-12">
+                <div class="product-f-image">
+                    <a href="./list-phone/samsung-galaxy-A02s-005.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/ss-glx-a02s/icon/samsung-galaxy-a02s-1.jpg" alt=" ">
+                        <span class="hotsale"></span>
+                        <span class="bhv45"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/samsung-galaxy-A02s-005.html">
+                        <h2 class="content-product-h2 card-title">Samsung Galaxy A02s</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">3000000</ins><del>3.950.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card single-product col-md-3 col-sm-6 col-12 ">
+                <div class="product-f-image">
+                    <a href="./list-phone/samsung-galaxy-a32-006.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/ss-glx-a32/icon/samsung-galaxy-a32-20.jpg" alt=" ">
+                        <span class="hotsale"></span>
+                        <span class="bhv30"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/samsung-galaxy-a32-006.html">
+                        <h2 class="content-product-h2 card-title">Samsung Galaxy A32</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">5850000</ins><del>6.990.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card single-product col-md-3 col-sm-6 col-12 ">
+                <div class="product-f-image">
+                    <a href="./list-phone/xiaomi-mi-11-007.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/xi-mi-11-lite-5g/icon/xiaomi-mi-11-lite-5g-2_10.jpg" alt=" ">
+                        <span class="hotsale"></span>
+                        <span class="bhv30"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/xiaomi-mi-11-007.html">
+                        <h2 class="content-product-h2 card-title">Xiaomi Mi 11 Lite 5G</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">8750000</ins><del>10.550.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card single-product col-md-3 col-sm-6 col-12">
+                <div class="product-f-image">
+                    <a href="./list-phone/xiaomi-redmi-node-10-pro-008.html" class="link-img">
+                        <img class="card-img-top img-prd" src="./img/phone/xi-mi-note-10pro/icon/xiaomi-redmi-note-10-pro_2_.jpg" alt=" ">
+                        <span class="hotsale"></span>
+                        <span class="bhv45"></span>
+                    </a>
+                </div>
+                <div class="card-body content-product">
+                    <a href="./list-phone/xiaomi-redmi-node-10-pro-008.html">
+                        <h2 class="content-product-h2 card-title">Xiaomi Redmi Note 10 Pro</h2>
+                    </a>
+                    <div class="content-product-deltals">
+                        <div class="product-carousel-price">
+                            <ins class="price money">6450000</ins><del>7.550.000</del>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 ">
+                <nav aria-label="Page navigation example ">
+                    <ul class="pagination justify-content-center ">
+                        <li class="page-item disabled ">
+                            <a class="page-link " href="#">Previous</a>
+                        </li>
+                        <li class="page-item active "><a class="page-link " href="# ">1</a></li>
+                        <li class="page-item "><a class="page-link " href="# ">2</a></li>
+                        <li class="page-item "><a class="page-link " href="# ">3</a></li>
+                        <li class="page-item "><span class="page-link">...</span></li>
+                        <li class="page-item "><a class="page-link " href="# ">7</a></li>
+                        <li class="page-item "><a class="page-link " href="# ">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <hr>
+        <div class="row ">
+            <div class="col-12">
+                <div class="toolbar-bottom ">
+                    <h2 class="title ">Điện thoại di động – Vật “bất li thân” ở thời đại công nghệ</h2>
+                    <p class="toolbar-bottom-text ">Khi khoa học kỹ thuật liên tục được cải tiến và công nghệ phát triển không ngừng thì đó cũng là lúc chiếc điện thoại di động trở nên quan trọng hơn bao giờ hết. Thật vậy, chúng ta có thể làm được rất nhiều việc: gọi điện, nhắn tin,
+                        gửi mail, soạn tài liệu (Word, Excel), chụp ảnh – quay video, xem phim hay chơi game với thiết bị có kích thước chỉ bằng một bàn tay.</p>
+                    <p class="toolbar-bottom-text ">Chính vì vậy, thị trường di động luôn chứng kiến sự cạnh tranh vô cùng khốc liệt giữa các nhà sản xuất. Họ sẵn sàng đầu tư nghiên cứu để liên tục cho ra đời những chiếc điện thoại mới nhất, từ giá rẻ, tầm trung, cận cao cấp cho đến
+                        cao cấp để đáp ứng tối đa nhu cầu của mọi đối tượng người dùng.</p>
+                </div>
+                <div id="toolbar" class="toolbar-bottom ">
+                    <h3 class="toolbar-bottom-text ">
+                        Điện thoại thông minh
+                    </h3>
+                    <p class="toolbar-bottom-text ">Điện thoại thông minh hay là smartphone, những mẫu điện thoại này được trang bị nhiều tính năng tân tiến về các điện toán và khả năng kết nối. Ngoài tính năng nghe – gọi cơ bản thì loại điện thoại này còn nhiều tính năng hiện đại khác
+                        như đọc báo, chơi game, lướt web và lên mạng xã hội.</p>
+                    <p class="toolbar-bottom-text ">Những điện thoại thuộc phân khúc này thường sở hữu màn hình lớn, camera độ phân giải cao và trang bị nhiều tính năng sinh trắc học như mở khóa gương mặt, vân tay,..</p>
+                    <p class="toolbar-bottom-img "><img alt="Điện thoại thông minh " src="./img/review/dien-thoai-1.webp "></p>
+                    <h3 class="toolbar-bottom-text ">
+                        Điện thoại phổ thông
+                    </h3>
+                    <p class="toolbar-bottom-text ">Điện thoại phổ thông là những mẫu điện thoại tập trung vào các chức năng nghe – gọi là chính. Do đó mẫu điện thoại này sở hữu thiết kế vô cùng nhỏ gọn với hệ thống phím bấm lớn và viên pin sử dụng lâu ngày. Một số hiện thoại phổ thông
+                        ngày nay cũng được trang bị khả năng kết nối mạng, lên mạng xã hội.</p>
+                    <h3 class="toolbar-bottom-text ">
+                        Điện thoại chơi game
+                    </h3>
+                    <p class="toolbar-bottom-text ">Điện thoại chơi game là một điện thoại thông minh nhưng được thiết kế tối ưu hơn cho việc chơi game như tần số quét màn hình lớn, cấu hình máy khủng cùng hệ thống tản nhiệt được nâng cấp. Ngoài ra, điện thoại chơi game thường được
+                        hãng trang bị thêm các phụ kiện hỗ trợ quá trình chơi game hiệu quả hơn như tản nhiệt, tay cầm chơi game.</p>
+                    <p class="toolbar-bottom-img "><img alt="Điện thoại chơi game " src="./img/review/dien-thoai-2.webp "></p>
+                    <h3 class="toolbar-bottom-text ">
+                        Điện thoại chụp ảnh
+                    </h3>
+                    <p class="toolbar-bottom-text ">Tương tự điện thoại chơi game, điện thoại chụp ảnh là một điện thoại thông minh với phần camera được tối ưu. Hầu hết các điện thoại thông minh ngày nay đều được trang bị hệ thống camera chất lượng với khả năng chụp góc rộng, lấy nét
+                        quang học, chụp thiếu sáng,.. và chúng đều có thể là một chiếc điện thoại chụp ảnh chất lượng.</p>
+                    <h2 class="toolbar-bottom-text ">Tại sao nên mua điện thoại thông minh?</h2>
+                    <ul class="toolbar-bottom-text ">
+                        <li class="toolbar-bottom-text-item ">Được trang bị nhiều công nghệ hiện đại, điển hình là iPhone 12 Pro Max.</li>
+                        <li class="toolbar-bottom-text-item ">Hỗ trợ tốt cho việc liên lạc, làm việc lẫn giải trí.</li>
+                        <li class="toolbar-bottom-text-item ">Không chỉ là thiết bị di động mà còn có thể đóng vai trò như một món đồ trang sức.</li>
+                        <li class="toolbar-bottom-text-item ">Dễ dàng kết nối với cộng đồng và thế giới.</li>
+                        <li class="toolbar-bottom-text-item ">Khả năng lưu giữ những khoảnh khắc đáng nhớ trong cuộc sống theo nhiều hình thức.</li>
+                    </ul>
+                    <h2 class="toolbar-bottom-text ">
+                        Phân loại điện thoại smartphone theo tầm giá
+                    </h2>
+                    <p class="toolbar-bottom-text ">Dựa vào giá bán, ta có thể chia điện thoại thông minh làm 4 loại chính như sau:</p>
+                    <h3 class="toolbar-bottom-text ">
+                        Smartphone giá rẻ
+                    </h3>
+                    <p class="toolbar-bottom-text ">
+                        <em>- Thông tin chung</em>: Là những thiết bị được bán với mức giá bình dân, phù hợp với đối tượng người dùng có điều kiện tài chính hạn chế.</p>
+                    <p class="toolbar-bottom-text "><em>- Đặc điểm</em>: Cấu hình tuy không mạnh mẽ nhưng vẫn đáp ứng tốt những nhu cầu hàng ngày (RAM 2 – 3 GB, chip Qualcomm 4xx hoặc Mediatek 6xxx), có thể được phát hành với nhiều phiên bản màu sắc thời trang, kích thước nhỏ gọn mang
+                        lại trải nghiệm cầm nắm dễ chịu…</p>
+                    <p class="toolbar-bottom-text "><em>- Thương hiệu tiêu biểu</em>: Xiaomi Redmi Note 10 Pro hay điện thoại Realme 8 vừa ra mắt.</p>
+                    <p class="toolbar-bottom-img "><img alt="Smartphone giá rẻ " src="./img/review/dien-thoai-3.webp "></p>
+                    <h3 class="toolbar-bottom-text ">
+                        Smartphone tầm Trung
+                    </h3>
+                    <p class="toolbar-bottom-text "><em>- Thông tin chung</em>: Bước nâng cấp so với dòng smartphone giá rẻ, có ngoại hình bắt mắt hơn và được nâng cấp về một số yếu tố.</p>
+                    <p class="toolbar-bottom-text "><em>- Đặc điểm</em>: Thiết kế kim loại sang trọng, màn hình lớn, viền mỏng có độ phân giải Full HD, tích hợp chip Snapdragon đời 6xx hoặc Helio P, RAM 3 – 4 GB cho hiệu suất giải trí tốt hơn. Ngoài ra, chúng còn sở hữu camera kép có
+                        khả năng chụp ảnh xóa phông, cảm biến vân tay, công nghệ mở khóa bằng gương mặt hay hỗ trợ cả AI (trí tuệ nhân tạo)...</p>
+                    <p class="toolbar-bottom-text "><em>- Sản phẩm tiêu biểu</em>: Samsung Galaxy A52 hay Xiaomi Mi 11 Lite 5G đang được bán độc quyền tại CĐTH20C.</p>
+                    <p class="toolbar-bottom-img "><img alt="Smartphone tầm trung " src="./img/review/dien-thoai-4.webp "></p>
+                    <h3 class="toolbar-bottom-text ">
+                        Smartphone cận cao cấp
+                    </h3>
+                    <p class="toolbar-bottom-text "><em>- Thông tin chung</em>: Những sản phẩm nằm ở trên phân khúc tầm trung, được trang bị những thông số và công nghệ rất gần với nhóm cao cấp.</p>
+                    <p class="toolbar-bottom-text "><em>- Đặc điểm</em>: Thiết kế quyến rũ với kim loại + kính, sử dụng chip Snapdragon 6xx tiên tiến hơn dòng smartphone tầm trung, RAM từ 4 – 6 GB, màn hình Full HD tràn viền kích thước lớn, tích hợp tiêu chuẩn chống nước, được trang
+                        bị viên pin dung lượng lớn cùng công nghệ sạc nhanh, camera kép độ phân giải cao đi kèm nhiều tính năng hữu ích…</p>
+                    <p class="toolbar-bottom-text "><em>- Thương hiệu tiêu biểu</em>: Samsung Galaxy A…</p>
+                    <h3 class="toolbar-bottom-text ">
+                        Smartphone cao cấp
+                    </h3>
+                    <p class="toolbar-bottom-text "><em>- Thông tin chung</em>: Những smartphone thuộc nhóm này đều có vẻ ngoài tuyệt đẹp, được trang bị phần cứng cực mạnh, phiên bản phần mềm mới nhất và nhiều công nghệ, tính năng hiện đại.</p>
+                    <p class="toolbar-bottom-text "><em>- Đặc điểm</em>: Hoàn thiện tinh xảo từ chất liệu kim loại, kính và có thể là cả gốm, màn hình tràn cạnh độ phân giải 2K, màn hình cong về 2 cạnh bên, tích hợp chip Snapdragon đời mới nhất (8xx) hay Apple A-series, có khả năng
+                        chống nước, cảm biến nhận diện gương mặt 3D, camera kép hỗ trợ zoom quang học, tạo biểu tượng cảm xúc bằng chính gương mặt người dùng…</p>
+                    <p class="toolbar-bottom-text "><em>- Sản phẩm tiêu biểu: </em>Xiaomi Mi 11 5G, Samsung Galaxy S21 Ultra 5G, iPhone 12 ...</p>
+                    <p class="toolbar-bottom-img "><img alt="Smartphone cao cấp " src="./img/review/dien-thoai-5.webp "></p>
+                    <h2 class="toolbar-bottom-text ">
+                        Các tiêu chí để lựa chọn smartphone tốt nhất</h2>
+                    <p class="toolbar-bottom-text ">Có rất nhiều yếu tố khác nhau để quyết định một mẫu smartphone có phải tốt nhất hay không. Hãy cùng điểm nhanh qua một số tiêu chí sau đây:</p>
+                    <h3 class="toolbar-bottom-text ">
+                        Thiết kế
+                    </h3>
+                    <p class="toolbar-bottom-text ">Thiết kế bên ngoài ảnh hưởng rất lớn đến quyết định chọn mua của người dùng. Vì ngày nay, các sản phẩm điện thoại không chỉ đơn thuần là một thiết bị liên lạc, giải trí mà nó còn đóng vai trò là một phụ kiện trang trí, thể hiện phần
+                        nào tính cách của người dùng. Đây cũng là một lý do khiến các mẫu smartphone ngày càng trở nên mỏng hơn, nhiều màu sắc hơn. Hay thiết kế pin rời kém sang đã biến mất, thay vào đó là pin liền nguyên khối sang trọng.</p>
+                    <h3 class="toolbar-bottom-text ">
+                        Màn hình
+                    </h3>
+                    <p class="toolbar-bottom-text ">Kích thước màn hình cũng sẽ ảnh hưởng đến tiêu chí chọn mua của người tiêu dùng. Bởi một số người dùng thiết thích bị nhỏ gọn nhưng số khác lại yêu thích các thiết bị màn hình lớn. Ngày nay các mẫu điện thoại mới ra mắt đang sở hữu
+                        kích thước màn hình ngày càng lớn do đa phần người dùng thích những chiếc điện thoại có màn hình càng lớn càng tốt.</p>
+                    <p class="toolbar-bottom-img "><img alt="Màn hình " src="./img/review/dien-thoai-6.webp "></p>
+                    <h3 class="toolbar-bottom-text ">
+                        Hệ điều hành
+                    </h3>
+                    <p class="toolbar-bottom-text ">Sẽ có nhiều người dùng lựa chọn hệ điều hành đầu tiên trước khi chọn mua mẫu điện thoại nào đó. Hiện nay một số hệ điều hành có trên điện thoại di động phải kể đến như iOS, Android, BlackBerry OS hay Windows Phone. Mỗi hệ điều hành
+                        sẽ được xây dựng và phát triển trên các nền tảng khác nhau nên sẽ có những ưu và nhược điểm khác nhau.</p>
+                    <p class="toolbar-bottom-text ">- Hệ điều hành Android:
+                    </p>
+                    <p class="toolbar-bottom-text ">Đây là hệ điều hành mở được Google phát triển trên nền tảng Linux và là hệ điều hành được sử dụng phổ biến nhất. Do được sử dụng phổ biến bởi nhiều thương hiệu nên các thiết bị chạy hệ điều hành Android cũng sở hữu mức giá khá đa dạng,
+                        từ điện thoại giá rẻ, tầm trung, cận cao cấp đến cao cấp bạn đều có thể tìm được sản phẩm chạy trên hệ điều hành này.</p>
+                    <p class="toolbar-bottom-text ">Ngoài ra, do là hệ điều hành mở nên người dùng có thể tùy biến giao diện một cách dễ dàng theo sở thích cá nhân. Nhưng đây cũng là một điểm yếu của hệ điều hành Android này khi độ an toàn, tính bảo mật chưa cao.</p>
+                    <p class="toolbar-bottom-img "><img alt="Hệ điều hành " src="./img/review/dien-thoai-7.webp "></p>
+                    <p class="toolbar-bottom-text ">- Hệ điều hành iOS:
+                    </p>
+                    <p class="toolbar-bottom-text ">iOS là hệ điều hành với tính bảo mật cao do được phát triển trên một nền tảng đóng. Mỗi một phiên bản iOS đều được kiểm thử rất kỹ càng trước khi đưa ra thị trường. Nếu phát hiện lỗ hổng mới sẽ được update nhanh chóng.</p>
+                    <p class="toolbar-bottom-text ">Nhược điểm của hệ điều hành là người dùng sẽ không được tùy biến giao diện, bàn phím theo phong cách của bản thân.</p>
+                    <p class="toolbar-bottom-text ">- Hệ điều hành BlackBerry OS
+                    </p>
+                    <p class="toolbar-bottom-text ">Hệ điều hành BlackBerry OS có tính bảo mật cao dùng giao diện sử dụng bắt mắt. Tuy nhiên kho ứng dụng trên hệ điều hành này chưa thực sự phong phú.</p>
+                    <h3 class="toolbar-bottom-text ">
+                        Cấu hình
+                    </h3>
+                    <p class="toolbar-bottom-text ">Con chip CPU + GPU sẽ quyết định đến tốc độ đa nhiệm và hoạt động của máy. Dung lượng RAM càng lớn, khả năng đa nhiệm của máy càng mượt. Và hầu hết các sản phẩm điện thoại hiện nay đều được trang bị dung lượng ram từ 3GB trở nên. Với
+                        các dòng sản phẩm cao cấp, có thể lên đến 6-8GB RAM.</p>
+                    <h3 class="toolbar-bottom-text ">
+                        Bộ nhớ trong
+                    </h3>
+                    <p class="toolbar-bottom-text ">Bộ nhớ là không gian lưu trữ hình ảnh, ứng dụng. Do đó người dùng sẽ ưu tiên một thiết bị sở hữu dung lượng bộ nhớ lớn hoặc có hỗ trợ thẻ nhớ mở rộng. Ngày nay, hầu hết các thiết bị smartphone đều sở hữu dung lượng bộ nhớ trong lớn
+                        tủ 64GB.
+                    </p>
+                    <h3 class="toolbar-bottom-text ">Camera</h3>
+                    <p class="toolbar-bottom-text ">Nếu người dùng yêu thích quay phim, chụp ảnh hoặc sử dụng điện thoại phục vụ công việc tương tự thì camera là nhân tố rất quan trọng. Lúc này, ngoài thông số camera thì còn sẽ quan tâm nhiều tính năng khác như hỗ trợ chụp ảnh góc rộng,
+                        khả năng lấy nét,...</p>
+                    <p class="toolbar-bottom-img "><img alt="Camera " src="./img/review/dien-thoai-8.webp "></p>
+                    <h3 class="toolbar-bottom-text ">Dung lượng pin</h3>
+                    <p class="toolbar-bottom-text ">Một điện thoại pin càng lớn, càng được người dùng yêu thích. Vì chỉ số dung lượng càng lớn (mAH) đồng nghĩa điện thoại có thể sử dụng càng lâu. Ngoài ra, người dùng sẽ còn quan tâm đến tính năng sạc nhanh của máy để lựa chọn sản phẩm
+                        khi mua.
+                    </p>
+                    <h3 class="toolbar-bottom-text ">Tính năng đặc biệt</h3>
+                    <p class="toolbar-bottom-text ">Ngoài những thông số trên thì quyết định tiêu dùng của điện thoại còn ảnh hưởng bởi một số tính năng đặc biệt của sản phẩm. Như một số điện thoại sẽ hỗ trợ vân tay mặt lưng, như số khác sẽ trang bị vân tay trong màn hình.</p>
+                    <h3 class="toolbar-bottom-text ">Giá thành</h3>
+                    <p class="toolbar-bottom-text ">Giá bán là một trong những yếu tố quan trọng nhất để quyết định người dùng có chọn mua một sản phẩm nào đó hay không. Với mỗi người dùng sẽ có những phân khúc lựa chọn khác nhau:</p>
+                    <p class="toolbar-bottom-text ">- Học sinh, sinh viên: Đối tượng này đặc điểm là khả năng tài chính còn phụ thuộc gia đình do đó sản phẩm hướng tới đa số là điện thoại phân khúc giá rẻ 3-4 triệu đồng.</p>
+                    <p class="toolbar-bottom-text ">- Nhân viên văn phòng, công nhân, viên chức: Đây là nhóm người dùng đã có khả năng tự chủ tài chính nên tiêu chí chọn mua smartphone cũng cao hơn như thiết kế đẹp, camera chụp tốt,... và các sản phẩm chọn mua đa số thuộc phân khúc
+                        cận cao cấp: từ 8 – 10 triệu đồng.</p>
+                    <p class="toolbar-bottom-text ">-Tín đồ công nghệ: Đây là phân khúc người yêu công nghệ, thường mong muốn sở hữu một mẫu điện thoại mạnh nhất, tốt nhất.</p>
+                    <h2 class="toolbar-bottom-text ">TOP 5 hãng điện thoại bán chạy nhất hiện nay</h2>
+                    <p class="toolbar-bottom-text ">Thị trường smartphone khá nhộn nhịp với nhiều sản phẩm đến từ nhiều thương hiệu khác nhau. Nhưng bán chạy nhất trên thị trường là 5 thương hiệu smartphone sau:</p>
+                    <h3 class="toolbar-bottom-text ">Apple</h3>
+                    <p class="toolbar-bottom-text ">Điện thoại iPhone với hầu hết sản phẩm nằm trong phân khúc cao cấp, do đó sản phẩm điện thoại iPhone với hiệu năng mạnh. Năm 2020, Apple đứng thứ 3 thế giới (chiếm tới 14% thị phần) với hơn 36 triệu thiết bị bán ra.</p>
+                    <p class="toolbar-bottom-text ">Một số sản phẩm nổi bật: iPhone 11, iPhone 12, iPhone Xr,...</p>
+                    <p class="toolbar-bottom-img "><img alt="Apple " src="./img/review/dien-thoai-9.webp "></p>
+                    <h3 class="toolbar-bottom-text ">Samsung</h3>
+                    <p class="toolbar-bottom-text ">Là mẫu điện thoại bán chạy thứ 2 thế giới trong năm 2020, Samsung chiếm tới 20% thị trường smartphone khi bán ra hơn 54 triệu máy. Các sản phẩm điện thoại Samsung khá đa dạng phân khúc từ flagship cao cấp (dòng Samsung S, Samsung Note),
+                        tầm trung (Samsung A) và một số sản phẩm phân khúc giá rẻ khác.</p>
+                    <p class="toolbar-bottom-text ">Một số sản phẩm nổi bật: Samsung Note 20, Samsung S21, Samsung A52,...</p>
+                    <p class="toolbar-bottom-img "><img alt="Samsung " src="./img/review/dien-thoai-10.webp "></p>
+                    <h3 class="toolbar-bottom-text ">Xiaomi</h3>
+                    <p class="toolbar-bottom-text ">Xiaomi là thương hiệu điện thoại Trung Quốc, hãng điện thoại này chiếm tới 10% thị phần điện thoại di động trên toàn thế giới với hơn 26 triệu máy bán ra trong năm 2020 và dừng chân ở vị trí thứ 4 trong 5 thương hiệu smartphone bán
+                        chạy toàn cầu.</p>
+                    <p class="toolbar-bottom-text ">Các sản phẩm Xiaomi nổi bật với dung lượng pin siêu cao, hiệu năng khủng. Một số sản phẩm nổi bật như: Xiaomi Mi 11 Lite 5G, Xiaomi Redmi Note 10, Xiaomi Mi 10T Pro,..</p>
+                    <h3 class="toolbar-bottom-text ">Oppo</h3>
+                    <p class="toolbar-bottom-text ">Là thương hiệu đứng thứ 5 trong danh sách, điện thoại OPPO có doanh số bán lên đến hơn 24 triệu máy, chiếm 9% thị phần. Các sản phẩm điện thoại OPPO với thiết kế sang trọng, camera chất lượng cùng giá bán phải chăng.</p>
+                    <p class="toolbar-bottom-text ">Một số điện thoại OPPO nổi bật: OPPO Reno5, OPPO A93, OPPO A15,…</p>
+                    <p class="toolbar-bottom-img "><img alt="Oppo " src="./img/review/dien-thoai-11.webp "></p>
+                    <h3 class="toolbar-bottom-text ">Realme</h3>
+                    <p class="toolbar-bottom-text ">Điện thoại Realme đang có sự tăng trưởng vượt bậc trong những năm gần đây. Sản phẩm điện thoại Realme tập trung chủ yếu ở phân khúc giá rẻ và tầm trung.</p>
+                    <p class="toolbar-bottom-text ">Một số sản phẩm nổi bật: Realme 6, Realme 8 Pro, Realme C15,…</p>
+                    <h2 class="toolbar-bottom-text ">Mua điện thoại smartphone chính hãng giá rẻ tại CĐTH20C</h2>
+                    <ul class="toolbar-bottom-text ">
+                        <li class="toolbar-bottom-text-item ">Tại <a href="./index.html ">CĐTH20C</a> tất cả các sản phẩm đều có xuất xứ rõ ràng và hóa đơn đầy đủ</li>
+                        <li class="toolbar-bottom-text-item ">Bảo hành chính hãng 12 tháng, 1 đổi 1 trong 30 ngày đầu tiên</li>
+                        <li class="toolbar-bottom-text-item ">Giá <span>bán rẻ nhất thị trường</span>. Nhiều chương trình khuyến mãi hấp dẫn. Chương trình thu cũ đổi mới, lên đời điện thoại</li>
+                        <li class="toolbar-bottom-text-item ">Nhiều dịch vụ tiện ích: trả góp 0% qua thẻ tính dụng với hơn 20 ngân hàng. Thanh toán online, thanh toán bằng thẻ, giao hàng và thu tiền tại nhà miễn phí trên toàn quốc.</li>
+                        <li class="toolbar-bottom-text-item ">Đội ngũ nhân viên tư vấn offline và chăm sóc khách hàng online luôn sẵn sàng giải đáp mọi thắc mắc, đáp ứng tối đa nhu cầu của người dùng.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="toolbar-footer ">
+                <input type="button" id="btn1" value="Thu gọn " />
+                <input type="button" id="btn2" value="Xem thêm " />
+            </div>
+        </div>
+    </div>
+    <div class="footer-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-about-us">
+                        <h2>CĐTH<span>20C</span></h2>
+                        <p>Phân phối Điện thoại Xiaomi, Apple, Samsung,... (Chính hãng) mới nhất, giá RẺ tại Hà Nội, Tp.HCM, Đà Nẵng. Bán, mua điện thoại Xiaomi xách tay trả góp Uy tín tại Hà Nội, HCM, Đà Nẵng.</p>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Địa chỉ liên hệ</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5177580567106!2d106.69916291446796!3d10.771600262228969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEvhu7kgdGh14bqtdCBDYW8gVGjhuq9uZw!5e0!3m2!1svi!2s!4v1630681410137!5m2!1svi!2s"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Tổng đài hỗ trợ (Thu phí gọi)</h2>
+                        <ul>
+                            <li><span class="support">Mua hàng:</span> 0394726213</li>
+                            <li><span class="support">Kỹ Thuật:</span> 0394726213</li>
+                            <li><span class="support">Khiếu nại:</span> 0394726213</li>
+                            <li><span class="support">Bảo Hành:</span> 0394726213</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title">Đăng kí nhận bản tin</h2>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="điền gmail đăng ký.... ">
+                                <input type="submit" value="Đăng ký ">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("gototop").style.display = "block";
+            } else {
+                document.getElementById("gototop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        document.getElementById("btn1").onclick = function() {
+            document.getElementById("toolbar").style.display = 'none';
+        };
+
+        document.getElementById("btn2").onclick = function() {
+            document.getElementById("toolbar").style.display = 'block';
+        }
+    </script>
+    <script src="./main.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/jquery.slim.min.js "></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.bundle.js "></script>
+    <script src="./bootstrap-4.6.0-dist/js/popper.min.js "></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js "></script>
+</body>
+
+</html>

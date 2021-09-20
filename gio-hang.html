@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CĐTH20C - Giỏ Hàng</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/FontAwesome/docs/css/all.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./gio-hang.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <!--JS-->
+    <script src="./san-pham.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="topFunction()" id="gototop" title="Go to top"><i class="fa fa-arrow-alt-circle-up"></i></button>
+        <div class="site-branding-area">
+            <div class="header-logo-cart container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo">
+                            <a href="./index.html"><img src="./img/Pornhub-Logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="shopping-item">
+                            <button id="cart">
+                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                Giỏ Hàng
+                            </button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Giỏ Hàng</h5>
+                                        <span class="close">&times;</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="cart-row">
+                                            <span class="cart-header col-12">Sản Phẩm</span>
+                                        </div>
+                                        <div class="cart-items">
+                                        </div>
+                                        <div class="cart-total">
+                                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                                            <span class="cart-total-price">0 - VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="moda-middle">
+                                        <h5>THÔNG TIN KHÁCH HÀNG</h5>
+                                        <form>
+                                            <div>
+                                                <input type="text" placeholder="Họ và tên">
+                                                <input type="text" placeholder="Số điện thoại">
+                                                <input type="text" placeholder="Địa chỉ email">
+                                            </div>
+                                            <p>Chọn địa chỉ nhận hàng</p>
+                                            <select name="flatform">
+                                                <option value="TP  HCM">TP HCM</option>
+                                                <option value="An Giang">An Giang</option>
+                                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                                <option value="Bắc Giang">Bắc Giang</option>
+                                                <option value="Bắc Kạn">Bắc Kạn</option>
+                                                <option value="Bạc Liêu">Bạc Liêu</option>
+                                                <option value="Bắc Ninh">Bắc Ninh</option>
+                                                <option value="Bến Tre">Bến Tre</option>
+                                                <option value="Bình Định">Bình Định</option>
+                                                <option value="Bình Dương">Bình Dương</option>
+                                                <option value="Bình Phước">Bình Phước</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Cà Mau">Cà Mau</option>
+                                                <option value="Cao Bằng">Cao Bằng</option>
+                                                <option value="Đắk Lắk">Đắk Lắk</option>
+                                                <option value="Đắk Nông">Đắk Nông</option>
+                                                <option value="Điện Biên">Điện Biên</option>
+                                                <option value="Đồng Nai">Đồng Nai</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Gia Lai">Gia Lai</option>
+                                                <option value="Hà Giang">Hà Giang</option>
+                                                <option value="Hà Nam">Hà Nam</option>
+                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                <option value="Hải Dương">Hải Dương</option>
+                                                <option value="Hậu Giang">Hậu Giang</option>
+                                                <option value="Hòa Bình">Hòa Bình</option>
+                                                <option value="Hưng Yên">Hưng Yên</option>
+                                                <option value="Khánh Hòa">Khánh Hòa</option>
+                                                <option value="Kiên Giang">Kiên Giang</option>
+                                                <option value="Kon Tum">Kon Tum</option>
+                                                <option value="Lai Châu">Lai Châu</option>
+                                                <option value="Lâm Đồng">Lâm Đồng</option>
+                                                <option value="Lạng Sơn">Lạng Sơn</option>
+                                                <option value="Lào Cai">Lào Cai</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Nam Định">Nam Định</option>
+                                                <option value="Nghệ An">Nghệ An</option>
+                                                <option value="Ninh Bình">Ninh Bình</option>
+                                                <option value="Ninh Thuận">Ninh Thuận</option>
+                                                <option value="Phú Thọ">Phú Thọ</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                <option value="Quảng Ninh">Quảng Ninh</option>
+                                                <option value="Quảng Trị">Quảng Trị</option>
+                                                <option value="Sóc Trăng">Sóc Trăng</option>
+                                                <option value="Sơn La">Sơn La</option>
+                                                <option value="Tây Ninh">Tây Ninh</option>
+                                                <option value="Thái Bình">Thái Bình</option>
+                                                <option value="Thái Nguyên">Thái Nguyên</option>
+                                                <option value="Thanh Hóa">Thanh Hóa</option>
+                                                <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                                <option value="Tiền Giang">Tiền Giang</option>
+                                                <option value="Trà Vinh">Trà Vinh</option>
+                                                <option value="Tuyên Quang">Tuyên Quang</option>
+                                                <option value="Vĩnh Long">Vĩnh Long</option>
+                                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                <option value="Yên Bái">Yên Bái</option>
+                                                <option value="Phú Yên">Phú Yên</option>
+                                                <option value="Tp.Cần Thơ">Tp.Cần Thơ</option>
+                                                <option value="Tp.Đà Nẵng">Tp.Đà Nẵng</option>
+                                                <option value="Tp.Hải Phòng">Tp.Hải Phòng</option>
+                                                <option value="Tp.Hà Nội">Tp.Hà Nội</option>
+                                            </select>
+                                            <input type="text" placeholder="Địa chỉ cụ thể">
+                                            <input type="text" placeholder="Yêu cầu của khách hàng">
+                                        </form>
+                                        <h6>Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của CĐTH20C</h6>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                                        <button type="button" class="btn btn-primary order">ĐẶT HÀNG</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainmenu navbar-light bg-light justify-content-start sticky-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light padding-style">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse header-logo-cart" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./shop.html">Sản Phẩm</a>
+                            </li>
+                            <li class="nav-item-list nav-item actives">
+                                <a class="nav-link" href="./gio-hang.html">Giỏ Hàng</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./dangnhap.html">Đăng Nhập</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="./dangky.html">Đăng ký</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm Kiếm ..." aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="product-big-title-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product-bit-title text-center">
+                            <h2>Giỏ Hàng</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-breadcrumb row">
+            <nav aria-label="breadcrumb col-md-2 col-sm-12 col-12 ">
+                <ol class="breadcrumb btn-group">
+                    <li class="breadcrumb-item"><a href="./index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item activer" aria-current="page">Giỏ Hàng</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="notification">
+            <p class="notification_inner">
+                <i class="fas fa-info-circle"></i>
+                <span class="notification_text">Do ảnh hưởng của dịch Covid-19, một số khu vực có thể nhận hàng chậm hơn dự kiến. CĐTH20C đang nỗ lực giao các đơn hàng trong thời gian sớm nhất. Cám ơn sự thông cảm của quý khách!</span>
+            </p>
+        </div>
+        <div class="shopping_cart">
+            <div class="shopping_cart_inner">
+                <div class="shopping_cart_header" id="title_message">
+                    <div class="row">
+                        <div class="none col-sm-6 col-md-4 col-12">Sản phẩm</div>
+                        <div class="none col-sm-6 col-md-2 col-12">Đơn giá</div>
+                        <div class="none col-sm-6 col-md-2 col-12">Số lượng</div>
+                        <div class="none col-sm-6 col-md-2 col-2">Thành tiền</div>
+                        <div class="none col-sm-6 col-md-2 col-1">
+                            <span class="shopping_cart_remove">
+                                <i class="fas fa-trash-alt"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping_cart_content">
+                    <div>
+                        <div class="shopping_cart_content_product" id="btnremove">
+                            <div class="shopping_cart_content_product_style">
+                                <div class="shopping_cart_content_product_information row">
+                                    <div class="none col-sm-6 col-md-4 col-12">
+                                        <a href="./list-phone/asus-rog-5-001.html" class="shopping_cart_item">
+                                            <img src="./img/phone/asus-rog-phone-5/icon/asus-rog-phone-5_0002_gsmarena_001.jpg" alt="">
+                                        </a>
+                                        <div>
+                                            <a href="./list-phone/asus-rog-5-001.html" class="shopping_cart_name">Asus ROG Phone 5</a>
+                                        </div>
+                                    </div>
+                                    <div class="price none col-sm-6 col-md-2 col-12">14.850.000 đ</div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <div class="quantity_product">
+                                            <button onclick="buttonMinus()" class="minus" type="button">-</button>
+                                            <input class="quantitys" id="quantity" type="text" name="quantity" value="1" disabled="disabled">
+                                            <button onclick="buttonAdd()" class="add" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="price none col-sm-6 col-md-2 col-12">
+                                        <span class="total">Tổng tiền :</span>
+                                        <span id="totals">14850000 đ</span>
+                                    </div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <button onclick="remove()" class="shopping_cart_remove remove">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shopping_cart_content_product" id="btnremove1">
+                            <div class="shopping_cart_content_product_style">
+                                <div class="shopping_cart_content_product_information row">
+                                    <div class="none col-sm-6 col-md-4 col-12">
+                                        <a href="./list-phone/iphone-12-pro-max-003.html" class="shopping_cart_item">
+                                            <img src="./img/phone/iphone-12-pro-max/icon/iphone-12-pro-max_1__7.jpg" alt="">
+                                        </a>
+                                        <div>
+                                            <a href="./list-phone/iphone-12-pro-max-003.html" class="shopping_cart_name">iPhone 12 Pro Max</a>
+                                        </div>
+                                    </div>
+                                    <div class="price none col-sm-6 col-md-2 col-12">28.990.000 đ</div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <div class="quantity_product">
+                                            <button onclick="buttonMinus1()" class="minus" type="button">-</button>
+                                            <input class="quantitys" id="quantity1" type="text" name="quantity" value="1" disabled="disabled">
+                                            <button onclick="buttonAdd1()" class="add" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="price none col-sm-6 col-md-2 col-12">
+                                        <span class="total">Tổng tiền :</span>
+                                        <span id="totals1">28990000 đ</span>
+                                    </div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <button onclick="remove1()" class="shopping_cart_remove remove">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shopping_cart_content_product" id="btnremove2">
+                            <div class="shopping_cart_content_product_style">
+                                <div class="shopping_cart_content_product_information row">
+                                    <div class="price none col-sm-6 col-md-4 col-12">
+                                        <a href="./list-phone/samsung-galaxy-a32-006.html" class="shopping_cart_item">
+                                            <img src="./img/phone/ss-glx-a32/icon/samsung-galaxy-a32-20.jpg" alt="">
+                                        </a>
+                                        <div>
+                                            <a href="./list-phone/samsung-galaxy-a32-006.html" class="shopping_cart_name">Samsung Galaxy A32</a>
+                                        </div>
+                                    </div>
+                                    <div class="none col-sm-6 col-md-2 col-12">5.850.000 đ</div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <div class="quantity_product">
+                                            <button onclick="buttonMinus2()" class="minus" type="button">-</button>
+                                            <input class="quantitys" id="quantity2" type="text" name="quantity" value="1" disabled="disabled">
+                                            <button onclick="buttonAdd2()" class="add" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="price none col-sm-6 col-md-2 col-12">
+                                        <span class="total">Tổng tiền :</span>
+                                        <span id="totals2">5850000 đ</span>
+                                    </div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <button onclick="remove2()" class="shopping_cart_remove remove">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shopping_cart_content_product" id="btnremove3">
+                            <div class="shopping_cart_content_product_style">
+                                <div class="shopping_cart_content_product_information row">
+                                    <div class="none col-sm-6 col-md-4 col-12">
+                                        <a href="./list-phone/xiaomi-redmi-node-10-pro-008.html" class="shopping_cart_item">
+                                            <img src="./img/phone/xi-mi-note-10pro/icon/xiaomi-redmi-note-10-pro_2_.jpg" alt="">
+                                        </a>
+                                        <div>
+                                            <a href="./list-phone/xiaomi-redmi-node-10-pro-008.html" class="shopping_cart_name">Xiaomi Redmi Note 10 Pro</a>
+                                        </div>
+                                    </div>
+                                    <div class="price none col-sm-6 col-md-2 col-12">6.450.000 đ</div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <div class="quantity_product">
+                                            <button onclick="buttonMinus3()" class="minus" type="button">-</button>
+                                            <input class="quantitys" id="quantity3" type="text" name="quantity" value="1" disabled="disabled">
+                                            <button onclick="buttonAdd3()" class="add" type="button">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="price none col-sm-6 col-md-2 col-12">
+                                        <span class="total">Tổng tiền :</span>
+                                        <span id="totals3">6450000 đ</span>
+                                    </div>
+                                    <div class="none col-sm-6 col-md-2 col-12">
+                                        <button onclick="remove3()" class="shopping_cart_remove remove">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="information_user">
+                        <div class="product-big-title-area">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="product-bit-title text-center">
+                                            <h2>Thông tin khách hàng</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="#">
+                            <input id="name" onfocusout="checkname()" type="text" placeholder="Họ và tên">
+                            <input id="phone" onfocusout="checkphone()" type="text" placeholder="Số điện thoại">
+                            <input id="email" onfocusout="checkmail()" type="text" placeholder="Địa chỉ email">
+                            <div class="address">
+                                <p>Chọn địa chỉ nhận hàng</p>
+                                <select name="flatform">
+                                    <option value="TP  HCM">TP HCM</option>
+                                    <option value="An Giang">An Giang</option>
+                                    <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                    <option value="Bắc Giang">Bắc Giang</option>
+                                    <option value="Bắc Kạn">Bắc Kạn</option>
+                                    <option value="Bạc Liêu">Bạc Liêu</option>
+                                    <option value="Bắc Ninh">Bắc Ninh</option>
+                                    <option value="Bến Tre">Bến Tre</option>
+                                    <option value="Bình Định">Bình Định</option>
+                                    <option value="Bình Dương">Bình Dương</option>
+                                    <option value="Bình Phước">Bình Phước</option>
+                                    <option value="Bình Thuận">Bình Thuận</option>
+                                    <option value="Bình Thuận">Bình Thuận</option>
+                                    <option value="Cà Mau">Cà Mau</option>
+                                    <option value="Cao Bằng">Cao Bằng</option>
+                                    <option value="Đắk Lắk">Đắk Lắk</option>
+                                    <option value="Đắk Nông">Đắk Nông</option>
+                                    <option value="Điện Biên">Điện Biên</option>
+                                    <option value="Đồng Nai">Đồng Nai</option>
+                                    <option value="Đồng Tháp">Đồng Tháp</option>
+                                    <option value="Đồng Tháp">Đồng Tháp</option>
+                                    <option value="Gia Lai">Gia Lai</option>
+                                    <option value="Hà Giang">Hà Giang</option>
+                                    <option value="Hà Nam">Hà Nam</option>
+                                    <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                    <option value="Hải Dương">Hải Dương</option>
+                                    <option value="Hậu Giang">Hậu Giang</option>
+                                    <option value="Hòa Bình">Hòa Bình</option>
+                                    <option value="Hưng Yên">Hưng Yên</option>
+                                    <option value="Khánh Hòa">Khánh Hòa</option>
+                                    <option value="Kiên Giang">Kiên Giang</option>
+                                    <option value="Kon Tum">Kon Tum</option>
+                                    <option value="Lai Châu">Lai Châu</option>
+                                    <option value="Lâm Đồng">Lâm Đồng</option>
+                                    <option value="Lạng Sơn">Lạng Sơn</option>
+                                    <option value="Lào Cai">Lào Cai</option>
+                                    <option value="Long An">Long An</option>
+                                    <option value="Nam Định">Nam Định</option>
+                                    <option value="Nghệ An">Nghệ An</option>
+                                    <option value="Ninh Bình">Ninh Bình</option>
+                                    <option value="Ninh Thuận">Ninh Thuận</option>
+                                    <option value="Phú Thọ">Phú Thọ</option>
+                                    <option value="Quảng Bình">Quảng Bình</option>
+                                    <option value="Quảng Bình">Quảng Bình</option>
+                                    <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                    <option value="Quảng Ninh">Quảng Ninh</option>
+                                    <option value="Quảng Trị">Quảng Trị</option>
+                                    <option value="Sóc Trăng">Sóc Trăng</option>
+                                    <option value="Sơn La">Sơn La</option>
+                                    <option value="Tây Ninh">Tây Ninh</option>
+                                    <option value="Thái Bình">Thái Bình</option>
+                                    <option value="Thái Nguyên">Thái Nguyên</option>
+                                    <option value="Thanh Hóa">Thanh Hóa</option>
+                                    <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                    <option value="Tiền Giang">Tiền Giang</option>
+                                    <option value="Trà Vinh">Trà Vinh</option>
+                                    <option value="Tuyên Quang">Tuyên Quang</option>
+                                    <option value="Vĩnh Long">Vĩnh Long</option>
+                                    <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                    <option value="Yên Bái">Yên Bái</option>
+                                    <option value="Phú Yên">Phú Yên</option>
+                                    <option value="Tp.Cần Thơ">Tp.Cần Thơ</option>
+                                    <option value="Tp.Đà Nẵng">Tp.Đà Nẵng</option>
+                                    <option value="Tp.Hải Phòng">Tp.Hải Phòng</option>
+                                    <option value="Tp.Hà Nội">Tp.Hà Nội</option>
+                                </select>
+                            </div>
+                            <input id="address" onfocusout="checkaddress()" type="text" placeholder="Địa chỉ cụ thể">
+                            <input id="request" type="text" placeholder="Yêu cầu của khách hàng">
+                        </form>
+                        <h6>(Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của CĐTH20C)</h6>
+                        <div class="modal-footer">
+                            <button type="button" onclick="dathang()" class="btn btn-primary order">ĐẶT HÀNG</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-top-area ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12 ">
+                    <div class="footer-about-us ">
+                        <h2>CĐTH<span>20C</span></h2>
+                        <p>Phân phối Điện thoại Xiaomi, Apple, Samsung,... (Chính hãng) mới nhất, giá RẺ tại Hà Nội, Tp.HCM, Đà Nẵng. Bán, mua điện thoại Xiaomi xách tay trả góp Uy tín tại Hà Nội, HCM, Đà Nẵng.</p>
+                        <div class="footer-social ">
+                            <a href="#"><i class="fab fa-facebook-f "></i></a>
+                            <a href="#"><i class="fab fa-twitter "></i></a>
+                            <a href="#"><i class="fab fa-youtube "></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12 ">
+                    <div class="footer-menu ">
+                        <h2 class="footer-wid-title ">Địa chỉ liên hệ</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5177580567106!2d106.69916291446796!3d10.771600262228969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEvhu7kgdGh14bqtdCBDYW8gVGjhuq9uZw!5e0!3m2!1svi!2s!4v1630681410137!5m2!1svi!2s "></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12 ">
+                    <div class="footer-menu ">
+                        <h2 class="footer-wid-title ">Tổng đài hỗ trợ (Thu phí gọi)</h2>
+                        <ul>
+                            <li><span class="support ">Mua hàng:</span> 0394726213</li>
+                            <li><span class="support ">Kỹ Thuật:</span> 0394726213</li>
+                            <li><span class="support ">Khiếu nại:</span> 0394726213</li>
+                            <li><span class="support ">Bảo Hành:</span> 0394726213</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12 ">
+                    <div class="footer-newsletter ">
+                        <h2 class="footer-wid-title ">Đăng kí nhận bản tin</h2>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="điền gmail đăng ký.... ">
+                                <input type="submit" value="Đăng ký ">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkname() {
+            var regExp = /^(?:[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ\s\t]){6,}$/;
+            var names = document.getElementById("name").value;
+
+            if (names == null || names == "") {
+                alert('Họ và tên không được để trống!');
+            } else if (regExp.test(names))
+                return true;
+            else {
+                alert('họ và tên phải tối thiểu 6 ký tự');
+            }
+        }
+
+        function checkphone() {
+            var regExp = /^(0[234][0-9]{8}|1[89]00[0-9]{4})$/;
+            var phone = document.getElementById("phone").value;
+            if (phone == null || phone == "") {
+                alert('Số điện thoại không được để trống!');
+            } else if (regExp.test(phone))
+                return true;
+            else
+                alert('SĐT không hợp lệ!');
+        }
+
+        function checkmail() {
+            var regExp = /^[A-Za-z][\w$.]+@[\w]+\.\w+$/;
+            var email = document.getElementById("email").value;
+            if (email == null || email == "") {
+                alert('Email không được để trống!');
+            } else if (regExp.test(email))
+                return true;
+            else
+                alert('email không hợp lệ!');
+        }
+
+        function checkaddress() {
+            var regExp = /^(?:[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ\s\t])$/;
+            var address = document.getElementById("address").value;
+            if (address == null || address == "") {
+                alert('Địa chỉ không được để trống!');
+            } else if (regExp.test(address))
+                return true;
+        }
+
+        function dathang() {
+            alert("Đặt hàng thành công")
+            location = 'index.html'
+        }
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("gototop").style.display = "block";
+            } else {
+                document.getElementById("gototop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="./gio-hang.js "></script>
+    <script src="./main.js "></script>
+    <script src="./bootstrap-4.6.0-dist/js/jquery.slim.min.js "></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.bundle.js "></script>
+    <script src="./bootstrap-4.6.0-dist/js/popper.min.js "></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js "></script>
+</body>
+
+</html>

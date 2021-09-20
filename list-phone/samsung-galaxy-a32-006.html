@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> CĐTH20C - Samsung Galaxy A32 Chính hãng</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap-4.6.0-dist/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/FontAwesome/docs/css/all.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="topFunction()" id="gototop" title="Go to top"><i class="fa fa-arrow-alt-circle-up"></i></button>
+        <div class="site-branding-area">
+            <div class="header-logo-cart container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="logo">
+                            <a href="../index.html"><img src="../img/Pornhub-Logo.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="shopping-item">
+                            <button id="cart">
+                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                Giỏ Hàng
+                            </button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Giỏ Hàng</h5>
+                                        <span class="close">&times;</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="cart-row">
+                                            <span class="cart-header col-12">Sản Phẩm</span>
+                                        </div>
+                                        <div class="cart-items">
+                                        </div>
+                                        <div class="cart-total">
+                                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                                            <span class="cart-total-price">0 - VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <div class="moda-middle">
+                                        <h5>THÔNG TIN KHÁCH HÀNG</h5>
+                                        <form>
+                                            <div>
+                                                <input type="text" placeholder="Họ và tên">
+                                                <input type="text" placeholder="Số điện thoại">
+                                                <input type="email" placeholder="Địa chỉ email">
+                                            </div>
+                                            <p>Chọn địa chỉ nhận hàng</p>
+                                            <select name="flatform">
+                                                <option value="TP  HCM">TP HCM</option>
+                                                <option value="An Giang">An Giang</option>
+                                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                                <option value="Bắc Giang">Bắc Giang</option>
+                                                <option value="Bắc Kạn">Bắc Kạn</option>
+                                                <option value="Bạc Liêu">Bạc Liêu</option>
+                                                <option value="Bắc Ninh">Bắc Ninh</option>
+                                                <option value="Bến Tre">Bến Tre</option>
+                                                <option value="Bình Định">Bình Định</option>
+                                                <option value="Bình Dương">Bình Dương</option>
+                                                <option value="Bình Phước">Bình Phước</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Cà Mau">Cà Mau</option>
+                                                <option value="Cao Bằng">Cao Bằng</option>
+                                                <option value="Đắk Lắk">Đắk Lắk</option>
+                                                <option value="Đắk Nông">Đắk Nông</option>
+                                                <option value="Điện Biên">Điện Biên</option>
+                                                <option value="Đồng Nai">Đồng Nai</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Đồng Tháp">Đồng Tháp</option>
+                                                <option value="Gia Lai">Gia Lai</option>
+                                                <option value="Hà Giang">Hà Giang</option>
+                                                <option value="Hà Nam">Hà Nam</option>
+                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                <option value="Hải Dương">Hải Dương</option>
+                                                <option value="Hậu Giang">Hậu Giang</option>
+                                                <option value="Hòa Bình">Hòa Bình</option>
+                                                <option value="Hưng Yên">Hưng Yên</option>
+                                                <option value="Khánh Hòa">Khánh Hòa</option>
+                                                <option value="Kiên Giang">Kiên Giang</option>
+                                                <option value="Kon Tum">Kon Tum</option>
+                                                <option value="Lai Châu">Lai Châu</option>
+                                                <option value="Lâm Đồng">Lâm Đồng</option>
+                                                <option value="Lạng Sơn">Lạng Sơn</option>
+                                                <option value="Lào Cai">Lào Cai</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Nam Định">Nam Định</option>
+                                                <option value="Nghệ An">Nghệ An</option>
+                                                <option value="Ninh Bình">Ninh Bình</option>
+                                                <option value="Ninh Thuận">Ninh Thuận</option>
+                                                <option value="Phú Thọ">Phú Thọ</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                <option value="Quảng Ninh">Quảng Ninh</option>
+                                                <option value="Quảng Trị">Quảng Trị</option>
+                                                <option value="Sóc Trăng">Sóc Trăng</option>
+                                                <option value="Sơn La">Sơn La</option>
+                                                <option value="Tây Ninh">Tây Ninh</option>
+                                                <option value="Thái Bình">Thái Bình</option>
+                                                <option value="Thái Nguyên">Thái Nguyên</option>
+                                                <option value="Thanh Hóa">Thanh Hóa</option>
+                                                <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                                <option value="Tiền Giang">Tiền Giang</option>
+                                                <option value="Trà Vinh">Trà Vinh</option>
+                                                <option value="Tuyên Quang">Tuyên Quang</option>
+                                                <option value="Vĩnh Long">Vĩnh Long</option>
+                                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                <option value="Yên Bái">Yên Bái</option>
+                                                <option value="Phú Yên">Phú Yên</option>
+                                                <option value="Tp.Cần Thơ">Tp.Cần Thơ</option>
+                                                <option value="Tp.Đà Nẵng">Tp.Đà Nẵng</option>
+                                                <option value="Tp.Hải Phòng">Tp.Hải Phòng</option>
+                                                <option value="Tp.Hà Nội">Tp.Hà Nội</option>
+                                            </select>
+                                            <input type="text" placeholder="Địa chỉ cụ thể">
+                                            <input type="text" placeholder="Yêu cầu của khách hàng">
+                                        </form>
+                                        <h6>Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của CĐTH20C</h6>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                                        <button type="button" class="btn btn-primary order">ĐẶT HÀNG</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainmenu navbar-light bg-light justify-content-start sticky-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light padding-style">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse header-logo-cart" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="../index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item-list nav-item ">
+                                <a class="nav-link" href="../shop.html">Sản Phẩm</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="../gio-hang.html">Giỏ Hàng</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="../dangnhap.html">Đăng Nhập</a>
+                            </li>
+                            <li class="nav-item-list nav-item">
+                                <a class="nav-link" href="../dangky.html">Đăng ký</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm Kiếm ..." aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb btn-group">
+                <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="../shop.html">Điện thoại di động</a></li>
+                <li class="breadcrumb-item activer" aria-current="page">Samsung Galaxy A32</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-md-5 col-sm-10 col-12 ">
+                <img src="../img/phone/ss-glx-a32/group/1.jpg" id="imgmain" alt="...">
+                <ul class="list-img">
+                    <li class="list-img-item"><img src="../img/phone/ss-glx-a32/group/1.jpg" onclick="changeimg('one')" id="one" alt="..."></li>
+                    <li class="list-img-item"><img src="../img/phone/ss-glx-a32/group/2.jpg" onclick="changeimg('two')" id="two" alt=""></li>
+                    <li class="list-img-item"><img src="../img/phone/ss-glx-a32/group/3.jpg" onclick="changeimg('three')" id="three" alt=""></li>
+                    <li class="list-img-item"><img src="../img/phone/ss-glx-a32/group/4.jpg" onclick="changeimg('four')" id="four" alt=""></li>
+                    <li class="list-img-item"><img src="../img/phone/ss-glx-a32/group/5.jpg" onclick="changeimg('fire')" id="fire" alt=" "></li>
+                </ul>
+                <img src="../img/400x100_COVID1.webp " alt="... ">
+            </div>
+            <div class="col-md-7 col-sm-12 col-12 product-center ">
+                <div class="product-center-header ">
+                    <h3>Samsung Galaxy A32 I Chính hãng</h3>
+                    <br>
+                    <div class="select ">
+                        <h2>Mua hàng từ:</h2>
+                        <select>
+                            <option value=" ">Hồ Chí Minh </option>
+                            <option value=" ">Hà Nội </option>
+                            <option value=" ">Đà Nẵng </option>
+                            <option value=" ">Tiền Giang </option>
+                            <option value=" ">Cà Mau</option>
+                        </select>
+                    </div>
+                    <div class="gia-san-pham ">
+                        <p>Giá khuyến mãi :<ins style="color: #ff0000; ">5.850.000 đ</ins> <del>6.990.000 đ</del></p>
+                    </div>
+                    <h3>Lựa chọn màu sắc</h3>
+                    <div class="row product-lua-chon">
+                        <div class="lua-chon">
+                            <a href="../list-phone/iphone-12-pro-max.html" class="item-lua-chon actives">
+                                <span>Trắng</span>
+                            </a>
+                        </div>
+                        <div class="lua-chon">
+                            <a href="../list-phone/iphone-12-pro-max.html" class="item-lua-chon ">
+                                <span>Đen</span>
+                            </a>
+                        </div>
+                        <div class="lua-chon">
+                            <a href="../list-phone/iphone-12-pro-max.html" class="item-lua-chon">
+                                <span>Xanh</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cps-additional-note ">
+                        <p>Hotsales từ ngày 03/07 - 04/07 : Giảm sốc chỉ còn 5.850.000 đ (số lượng có hạn,không áp dụng cùng chương trình khác).</p>
+                        <p>Ngày hotsales cuối cùng chỉ áp dụng mua tại cửa hàng hoặc thanh toán online 100%</p>
+                    </div>
+
+                    <div class="khuyen-mai ">
+                        <div id="promotion_header">
+                            <i class="fa fa-gift" aria-hidden="true"></i> Khuyến mãi
+                        </div>
+                        <ul>
+                            <li>Thu cũ lên đời, trợ giá 500.000đ</li>
+                            <li>Miễn phí dán màn hình lần đầu.</li>
+                            <li>Tặng 50.000đ cho lần mua hàng tiếp theo.</li>
+                        </ul>
+                    </div>
+                    <div class="mua-ngay ">
+                        <div class="product-button ">
+                            <a href="../list-phone/iphone-12-pro-max.html" class="btn btn-primary ">
+                                <p>Mua Ngay</p>
+                            </a>
+                            <a href="../list-phone/iphone-12-pro-max.html" class="btn btn-primary ">
+                                <p>Thêm Vào Giỏ</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row ">
+            <div class="thong-so-ky-thuat col-md-5 col-sm-12 col-12 ">
+                <div class="thong-so-ky-thuat-left row ">
+                    <div class=" col-12 ">
+                        <div class="thong-so-ky-thuat-header ">
+                            <h2>Thông số kỹ thuật</h2>
+                        </div>
+                        <ul>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Kích hước màn hình</p>
+                                <div>
+                                    <p>6.4 inches</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Công nghệ màn hình</p>
+                                <div>
+                                    <p>Super AMOLED</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Camera sau</p>
+                                <div>
+                                    <p>Camera góc rộng: 64 MP, f/1.8, 26mm, PDAF Camera góc siêu rộng: 8 MP, f/2.2, 123˚, 1/4.0", 1.12µm Camera macro: 5 MP, f/2.4 Cảm biến chiều sâu:5 MP, f/2.4</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Camera trước</p>
+                                <div>
+                                    <p>20 MP, f/2.2</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Chipset </p>
+                                <div>
+                                    <p>Mediatek Helio G80 (12 nm)</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Dung lượng RAM</p>
+                                <div>
+                                    <p>6 GB</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Bộ nhớ trong </p>
+                                <div>
+                                    <p>128 GB</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">PIN</p>
+                                <div>
+                                    <p>Li-Ion 5000 mAh</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Thẻ SIM</p>
+                                <div>
+                                    <p>2 SIM (nano‑SIM)</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Hệ điều hành</p>
+                                <div>
+                                    <p>Android 11, One UI 3.0</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Độ phân giải màn hình</p>
+                                <div>
+                                    <p>1080 x 2400 pixels (FullHD+)</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Loại CPU</p>
+                                <div>
+                                    <p>Hexa-core</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">GPU</p>
+                                <div>
+                                    <p>8 nhân ( 2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55 )</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Quay video</p>
+                                <div>
+                                    <p>4K@30fps, 1080p@30/120fps</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Quay video trước</p>
+                                <div>
+                                    <p>20 MP, f/2.2,</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Kích thước</p>
+                                <div>
+                                    <p>158.9 x 73.6 x 8.4 mm</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Trọng lượng</p>
+                                <div>
+                                    <p>184 g</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Công nghệ sạc</p>
+                                <div>
+                                    <p>Sạc nhanh 15W</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Cổng sạc</p>
+                                <div>
+                                    <p>USB Type-C</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Cảm biến vân tay</p>
+                                <div>
+                                    <p>Cảm biến vân tay trong màn hình</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Các loại cảm biến</p>
+                                <div>
+                                    <p>Cảm biến ánh sáng, Cảm biến áp kế, Cảm biến gia tốc, Cảm biến tiệm cận, Con quay hồi chuyển, La bàn</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Wi-Fi</p>
+                                <div>
+                                    <p> Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct, hotspot</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Bluetooth</p>
+                                <div>
+                                    <p>5.0, A2DP, LE</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">GPS</p>
+                                <div>
+                                    <p>Có, hỗ trợ A-GPS, GLONASS</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Kiểu màn hình</p>
+                                <div>
+                                    <p>Giọt nước</p>
+                                </div>
+                            </li>
+                            <li class="thong-so-ky-thuat-li ">
+                                <p class="thong-so ">Tính năng camera</p>
+                                <div>
+                                    <p>Góc rộng (Wide) Góc siêu rộng (Ultrawide) HDR Lấy nét theo pha (PDAF) Siêu cận (Macro) Toàn cảnh (Panorama) Xóa phông</p>
+                                </div>
+                            </li>
+                            <li class="end ">
+                                <p class="thong-so ">Tính năng đặc biệt</p>
+                                <div>
+                                    <p>Bảo mật vân tay</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-content col-md-7 col-sm-12 col-12 ">
+                <h2 class="toolbar-bottom-img ">Đánh giá Samsung Galaxy A32</h2>
+                <p class="toolbar-bottom-text ">Trong phân khúc smartphone tầm trung hiện nay đã có nhiều sản phẩm tích hợp nhiều công nghệ tiên tiến, và Samsung A32 cũng không ngoại lệ. Sở hữu màn hình lớn, camera 48 MP cùng vi xử lý hiệu năng cao, đây sẽ là
+                    chiếc smartphone phù hợp với mọi người dùng</p>
+                <h3 class="toolbar-bottom-text ">Thiết kế thời thượng cùng màn hình FullHD+ viền mỏng ấn tượng</h3>
+                <p class="toolbar-bottom-text ">Galaxy A32 mang thân máy vuông vức thời thượng cùng màu đen bắt mắt. Tổng kích thước thân máy mỏng chỉ 9.1mm và có trọng lượng 205g, giúp cầm nắm dễ dàng & thuận tiện cho mọi tác vụ.</p>
+                <img class="toolbar-bottom-img " alt=" " src="../img/phone/ss-glx-a32/backroud/samsung-galaxy-a32-0.webp">
+                <p class="toolbar-bottom-text ">Máy được trang bị màn hình giọt nước nhỏ có tên là Infinity-U với viền mỏng hai bên ấn tượng, tạo không gian giải trí đầy chỉ chi tiết. Màn hình của máy có kích thước 6.4 inch, độ phân giải FullHD+ (720x1600
+                    pixels) sẽ mang đến chất lượng hình ảnh rõ nét cho các trình phát video và trò chơi giải trí.</p>
+                <img class="toolbar-bottom-img " alt=" " src="../img/phone/ss-glx-a32/backroud/samsung-galaxy-a32-1.webp ">
+                <p class="toolbar-bottom-text ">Sản phẩm đều là hàng chính hãng VN/A và được bảo hành 12 tháng tại trung tâm bảo hành Samsung tại Việt Nam nên bạn có thể hoàn toàn yên tâm khi sử dụng.</p>
+                <h2 class="toolbar-bottom-text ">Mua Samsung Galaxy A32 chính hãng giá rẻ tại CĐTH20C</h2>
+                <p class="toolbar-bottom-text ">
+                    Với những gì mà Samsung đã mang đến, đây là thực sự là chiếc điện thoại đáng sở hữu hàng. Nếu bạn muốn mua hàng chính hãng và đang không biết nên mua ở đâu tốt nhất thì CĐTH20C sẽ là một địa chỉ mà bạn nên cân nhắc. Tại đây, điện thoại Samsung Galaxy
+                    A32 đang có mức giá rất tốt, hỗ trợ trả góp lãi suất 0% thủ tục nhanh gọn và nhiều hình thức thanh toán mang lại sự tiện lợi cho khách hàng.
+                </p>
+                <div class="comment ">
+                    <div class="comment-icon ">
+                        <p><i class="fa fa-comments "></i>Comment</p>
+                    </div>
+                    <div class="form-comment ">
+                        <form>
+                            <input class="comment-item " type="text" placeholder="mời bạn nhập bình luận (hãy tuân thủ quy tắc cộng đồng khi bình luận) ">
+                            <div class="infor ">
+                                <input type="text" class="txtfullname " maxlength="50" placeholder="Tên của bạn (Bắt buộc) ">
+                                <input type="text" class="txtgmail " maxlength="50" placeholder="Email (Không bắt buộc) ">
+                                <input type="submit" class="txtsubmit ">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="user-comment ">
+                        <div class="user-avatar ">
+                            <img src="../img/avatar/dvh.jpg " alt=" " class="avatar-img ">
+                            <span id="repcmt" class="rep ">Trả lời</span>
+                        </div>
+                        <div class="post-comment ">
+                            <div class="post-comment-item">
+                                <span class="user-name ">Đàm Vĩnh Biệt (96 tỷ)</span>
+                                <span class="time "><i class="fa fa-clock "></i>56 Phút trước</span>
+                                <div class="item-comment ">Mấy người có tư cách gì bắt tao sao kê ?</div>
+                            </div>
+                        </div>
+                        <ul class="rep-comment ">
+                            <li class="form-rep-comment" id="formrepcmt">
+                                <form>
+                                    <input class="comment-item " type="text" placeholder="mời bạn nhập bình luận (hãy tuân thủ quy tắc cộng đồng khi bình luận) ">
+                                    <div class="infor ">
+                                        <input type="text" class="txtfullname " maxlength="50" placeholder="Tên của bạn (Bắt buộc) ">
+                                        <input type="text" class="txtgmail " maxlength="50" placeholder="Email (Không bắt buộc) ">
+                                        <input type="submit" class="txtsubmit ">
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="rep-comment-1 ">
+                                <img src="../img/avatar/nguyen-phuong-hang.jpg" alt=" " class="avatar-img">
+                                <div class="post-comment-item ">
+                                    <span class="user-name ">Nguyễn Phương Hằng (Sao Kê)</span>
+                                    <span class="time"><i class="fa fa-clock"></i>20 Phút trước</span>
+                                    <div class="item-comment ">M* mày đưa tiền cho mày rồi giờ m nói không có tư cách à ?</div>
+                                </div>
+                            </li>
+                            <li class="rep-comment-1 ">
+                                <img src="../img/avatar/tranthanh.jpg" alt=" " class="avatar-img ">
+                                <div class="post-comment-item ">
+                                    <span class="user-name ">Trấn Thành (Người chơi hệ thuỷ)</span>
+                                    <span class="time "><i class="fa fa-clock "></i>12 Phút trước</span>
+                                    <div class="item-comment ">cô mà bắt tôi sao kê tôi khóc cho cô xem :((((</div>
+                                </div>
+                            </li>
+                            <li class="rep-comment-1 ">
+                                <img src="../img/anonymous.png" alt=" " class="avatar-img ">
+                                <div class="post-comment-item ">
+                                    <span class="user-name-admin">Admin (Fan cô Hằng)</span>
+                                    <span class="admin">QTV</span>
+                                    <span class="time"><i class="fa fa-clock "></i>10 Phút trước</span>
+                                    <div class="item-comment">sao kê đi đừng nói nhiều</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-about-us">
+                        <h2>CĐTH<span>20C</span></h2>
+                        <p>Phân phối Điện thoại Xiaomi, Apple, Samsung,... (Chính hãng) mới nhất, giá RẺ tại Hà Nội, Tp.HCM, Đà Nẵng. Bán, mua điện thoại Xiaomi xách tay trả góp Uy tín tại Hà Nội, HCM, Đà Nẵng.</p>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Địa chỉ liên hệ</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5177580567106!2d106.69916291446796!3d10.771600262228969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEvhu7kgdGh14bqtdCBDYW8gVGjhuq9uZw!5e0!3m2!1svi!2s!4v1630681410137!5m2!1svi!2s"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-menu">
+                        <h2 class="footer-wid-title">Tổng đài hỗ trợ (Thu phí gọi)</h2>
+                        <ul>
+                            <li><span class="support">Mua hàng:</span> 0394726213</li>
+                            <li><span class="support">Kỹ Thuật:</span> 0394726213</li>
+                            <li><span class="support">Khiếu nại:</span> 0394726213</li>
+                            <li><span class="support">Bảo Hành:</span> 0394726213</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xl-3 col-12">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title">Đăng kí nhận bản tin</h2>
+                        <div class="newsletter-form">
+                            <form action="#">
+                                <input type="email" placeholder="điền gmail đăng ký.... ">
+                                <input type="submit" value="Đăng ký ">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("repcmt").onclick = function() {
+            document.getElementById("formrepcmt").style.display = 'block';
+        };
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("gototop").style.display = "block";
+            } else {
+                document.getElementById("gototop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="../main.js "></script>
+    <script src="../bootstrap-4.6.0-dist/js/jquery.slim.min.js "></script>
+    <script src="../bootstrap-4.6.0-dist/js/popper.min.js "></script>
+    <script src="../bootstrap-4.6.0-dist/js/bootstrap.bundle.js "></script>
+    <script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js "></script>
+</body>
+
+</html>
